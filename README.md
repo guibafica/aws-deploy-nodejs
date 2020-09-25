@@ -22,11 +22,11 @@ Nele, vamos configurar como a aplicação vai funcionar.
 > Faça um teste para ver se sua aplicação já está rodando, execute um `docker-compose up` no terminal da aplicação, espere ate aparecer algo como "node index.js", vá no navegador e acesse `localhost:3000`. Se aparecer o "hello word", pode cancelar o processo no terminar e vamos continuar.
 
 ## 3º Passo - Configurar o servidor na aws:
-Vamos usar a (CLI da aws)[https://github.com/aws/aws-cli], então instale corretamente ela de acordo com seu OS. 
+Vamos usar a [CLI da aws](https://github.com/aws/aws-cli), então instale corretamente ela de acordo com seu OS. 
 
 > Para verificar se está tudo instalado corretamente, execute um `aws help` no terminal e vê se é reconhecido.
 
-Agora vamos acessar o (console da aws)[https://aws.amazon.com/pt/console/], depois de criar ou logar na sua conta execute `aws configure` no terminal.
+Agora vamos acessar o [console da aws](https://aws.amazon.com/pt/console/), depois de criar ou logar na sua conta execute `aws configure` no terminal.
 Irá pedir 4 informações: 
  - AWS Access Key ID -> Obtém no seu usuário, na aba "My Security Credentials", Chaves de acesso e por fim, Criar nova chave de acesso.
  - AWS Secret Access Key -> Vem junto com o Access Key ID.
@@ -34,7 +34,7 @@ Irá pedir 4 informações:
  - Default output format -> Testei colocando `yaml`, e funcionou...
 
 ## 4º Passo - Criar um novo serviço/servidor na awsec2 com nossa aplicação rodando lá:
-Antes, precisamos instalar o (Docker Machine)[https://docs.docker.com/machine/install-machine/].
+Antes, precisamos instalar o [Docker Machine](https://docs.docker.com/machine/install-machine/).
 
 > Para verificar se está tudo instalado corretamente, execute um `docker-machine -h` no terminal e vê se é reconhecido.
 
@@ -59,3 +59,5 @@ Agora vamos subir nosso código, e fazer com que ele fique online executando na 
  - Port Range: 3000; "A mesma que escolhemos durante a configuração"
  - Source: Anywhere;
 > Salva, volta em "Instances", copie o IPV4 Public IP da sua máquina criada na aws ec2. Cole esse ip no navegador sucedido de `:3000`. Se aparecer o "Hello Word", parabéns, sua aplicação está online ^^.
+
+Made with 💜 by [Guilherme Bafica](https://github.com/guibafica) 👋 
